@@ -298,6 +298,8 @@ console.log(Rocky)
 
 console.log(Apollo)
 
+// we can add methods or properties to a constructor using the prototype object and inheritance
+
 fightNight.prototype.knockout = function(){
   console.log('You just got KNOCKED TF OUT!!!')
 }
@@ -307,6 +309,8 @@ Apollo.specialMove = 'Tiger Claw'
 Apollo.taunt = function(){
   console.log(`You can't handle my ${this.specialMove}`)
 }
+
+// you can still apply properties and methods to individual objects made with constructors using the dot notation
 
 Apollo.fight(3)
 Rocky.playDirty()
@@ -318,3 +322,5 @@ let Drago = new fightNight('Ivan Drago',240,76,false,false)
 Drago.useSteroids = true
 
 console.log(Drago)
+
+// could make a game with health, speed, attack, defense similarly
