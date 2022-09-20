@@ -296,14 +296,25 @@ const Rocky = new fightNight('Rocky Balboa', 218, 69, true, true)
 
 console.log(Rocky)
 
-console. log(Apollo)
+console.log(Apollo)
 
 fightNight.prototype.knockout = function(){
   console.log('You just got KNOCKED TF OUT!!!')
 }
 
-console.log(Apollo)
+fightNight.prototype.specialMove = ''
+Apollo.specialMove = 'Tiger Claw'
+Apollo.taunt = function(){
+  console.log(`You can't handle my ${this.specialMove}`)
+}
 
 Apollo.fight(3)
 Rocky.playDirty()
+Apollo.taunt()
 Apollo.knockout()
+
+let Drago = new fightNight('Ivan Drago',240,76,false,false)
+
+Drago.useSteroids = true
+
+console.log(Drago)
